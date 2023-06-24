@@ -27,7 +27,7 @@ import { HomeComponent } from './component/home/home.component';
     ReactiveFormsModule,
     HttpClientModule,
     StoreModule.forRoot(rootReducer),
-    // StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     // EffectsModule.forRoot(rootEffects),
   ],
   providers: [],
