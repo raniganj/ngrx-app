@@ -1,0 +1,25 @@
+<h1 style="text-decoration: underline;">
+  Welcome to User Details
+</h1>
+
+<div class="parent">
+  <div class="child">
+    <div>
+      <h2>Fetch Module User data.</h2>
+      <p>
+        <b>UserId :</b> {{module1User?.userId}} <br>
+        <b>Title :</b> {{module1User?.title}} <br>
+        <b>Body :</b> {{module1User?.body}} <br>
+        <button class="btn btn-primary btn-sm ms-4" (click)="getModule1UserByID()">get user1</button>
+      </p>
+      <!-- <div class="row justify-content-center">
+        <div class="col-4">
+          <input type="number" class="form-control" placeholder="Enter number" [(ngModel)]="inputValue">
+        </div>
+        <div class="col-4 text-start">
+          <button class="btn btn-sm btn-secondary" (click)="userData1IncreamentByParams()">Increase By Value</button>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
