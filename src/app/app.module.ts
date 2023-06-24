@@ -9,16 +9,18 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { rootReducer } from './store/root.reducer';
+import { rootEffects, rootReducer } from './store/root.reducer';
 import { CounterComponent } from './component/counter/counter.component';
 import { HomeComponent } from './component/home/home.component';
+import { Module1Component } from './component/module1/module1.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     CounterComponent,
-    HomeComponent
+    HomeComponent,
+    Module1Component
   ],
   imports: [
     BrowserModule,
@@ -27,8 +29,8 @@ import { HomeComponent } from './component/home/home.component';
     ReactiveFormsModule,
     HttpClientModule,
     StoreModule.forRoot(rootReducer),
-    // StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    // EffectsModule.forRoot(rootEffects),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    EffectsModule.forRoot(rootEffects),
   ],
   providers: [],
   bootstrap: [AppComponent]
