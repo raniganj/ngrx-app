@@ -10,14 +10,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { rootReducer } from './store/root.reducer';
-// import { CounterComponent } from './component/counter/counter.component';
+import { CounterComponent } from './component/counter/counter.component';
 import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    // CounterComponent,
+    CounterComponent,
     HomeComponent
   ],
   imports: [
